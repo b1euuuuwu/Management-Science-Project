@@ -15,4 +15,6 @@ NatriumRequirement: meals_meal1 + 2 meals_meal2 + meals_meal3 + meals_meal4
  + meals_meal5 <= 2
 ProteinRequirement: 40 meals_meal1 + 41 meals_meal2 + 12 meals_meal3
  + 27 meals_meal4 + 19 meals_meal5 >= 60
+TotalMeals: meals_meal1 + meals_meal2 + meals_meal3 + meals_meal4
+ + meals_meal5 = 3
 End

@@ -57,6 +57,11 @@ prob = LpProblem("DietProblem", LpMinimize)
 nutrition_vars = LpVariable.dicts("meals", meals, 0)
 
 prob += (
+    lpSum(nutrition_vars[i] for i in meals) == 3,
+    "TotalMeals"
+)
+
+prob += (
     lpSum([costs[i] * nutrition_vars[i] for i in meals]),
     "Total Cost of meals per day",
 )
